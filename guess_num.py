@@ -1,12 +1,13 @@
 import random
 num = random.randint(1,100)
+count = 0
 while True:
+	count = count + 1
 	guess = int(input('請從1到100中輸入一個數字: '))
 	if guess == num:
-		print('終於猜對了!')
+		print('終於猜對了!總共猜了', count, '次')
 		break
-	else:
-		if 	guess > num:
-			print('比答案大')
-		else: 
-			print('比答案小')	
+	elif guess > num:
+		print('比答案大')
+	elif guess < num: 
+		print('比答案小')	
