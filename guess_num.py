@@ -1,9 +1,11 @@
 import random
-num = random.randint(1,100)
+start = int(input('請決定隨機變數範圍的初始值: '))
+end = int(input('請決定隨機變數範圍的結束值: '))
+num = random.randint(start,end)
 count = 0
 while True:
 	count = count + 1
-	guess = int(input('請從1到100中輸入一個數字: '))
+	guess = int(input('請猜數字: '))
 	if guess == num:
 		print('終於猜對了!這是你猜的第', count, '次')
 		break
